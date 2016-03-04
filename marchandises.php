@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
    <head>
@@ -12,13 +13,28 @@
    
    <div id = "welcomebanner"> 
    <div id = "titlebanner">
-   <img src = "Images/GamerJoeslogo.png" atl = "Logo Gamer Joes" />
+   <img src = "Images/GamerJoeslogo.png" alt = "Logo Gamer Joes" />
    <h1>Gamer Joes</h1>
    <h2>La référence Jeux Vidéo et Nouvelles Technologies au Québec</h2>
    </div>
    <div id = "sessioninfo">
-   <a href="connect.html">se connecter</a> <span> / </span>
-   <a href="inscription.html">s'inscrire</a>
+   <?php 
+	if (isset($_POST['login']) && $_POST['login'] == "admin" && $_POST['passe'] == "12345" )
+	{
+	$_SESSION['login'] = $_POST['login'];
+	
+	echo 'Bienvenue'.' '.$_POST['login'] .' ';
+	echo '<a href="logout.php">Se déconnecter</a> ';
+	echo '<a href="modifier.php">Modifier son compte</a>';
+	}
+	
+	else
+	{
+		?> <a href="connect.html">Se connecter</a> <span> / </span>
+			<a href="inscription.html">Inscription</a><?php
+	}?>
+
+   
    
    <div id = "sessionconnecter">
    </div>

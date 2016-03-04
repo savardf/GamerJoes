@@ -1,8 +1,32 @@
-﻿<!DOCTYPE html>
+﻿<?php
+		
+			
+			if(isset ($_POST['password']))
+			{	   $conn = new PDO('mysql:host=localhost;dbname=tp2-fredlamirande-francoissavard','prof','qwerty123', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
+
+				
+				try
+				{
+					$insert = $conn->prepare('CALL ajouter_client(:prenom, :nom,:adresse,:ville,:province,:codePostal,:login,:motPasse,:email)');
+					$insert->execute(array('prenom' => $_POST['prenom'],'nom' => $_POST['nom'],'adresse' => $_POST['adresse'],'ville' => $_POST['ville'], 'province' => $_POST['province'],'codePostal' => $_POST['code'], 'login' => $_POST['username'], 'motPasse' => sha1($_POST['password']), 'email' => $_POST['email']));
+				
+					
+				}
+				catch (PDOException $e) 
+				{
+					exit( "Erreur" . $e -> getMessage());
+				}
+
+				$insert->closeCursor();
+				$conn = null;
+			}
+		?>
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
    <head>
 		<meta charset="utf-8" />
-		<title>Gamer Joes: La référence Jeux Vidéo et Nouvelles Technologies au Québec - Inscription</title>
+		<title>Gamer Joes: La référence Jeux Vidéo et Nouvelles Technologies au Québec - Connexion</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
    </head>
    <body>
@@ -15,8 +39,8 @@
    <h2>La référence Jeux Vidéo et Nouvelles Technologies au Québec</h2>
    </div>
    <div id = "sessioninfo">
-     <a href="connect.html">Se connecter</a> <span> / </span>
-			<a href="inscription.html">S'inscrire</a>
+		<a href="connect.html">Se connecter</a> <span> / </span>
+		<a href="inscription.html">S'inscrire</a>
 
    
    
@@ -82,7 +106,7 @@
  
    <div id = "bande">
 			<div id = "stuff1">
-				<h2><span>Inscription</span></h2>
+				<h2><span>Confirmation d'inscription</span></h2>
 			</div>
 			<div id = "stuff2">
 				<h2><span>Notre top 10</span></h2>
@@ -93,71 +117,16 @@
    
 	   <div id = "textMainLeft">
 	   
-		<form id="formConnect" method="post" action="insciptionOk.php" >
-		
-        <div>  
-            <label for="txtPrenom">Prénom: </label>
-            <input type="text" name="prenom" id="prenom" />
-            <span class="erreur" id="errPrenom"></span>
-        </div>
-		<div>
-			<label for="txtNom">Nom: </label>
-            <input type="text" name="nom" id="nom" />
-            <span class="erreur" id="errNom"></span>
-		</div>
-        <div> 
-            <label for="txtAdresse">Adresse: </label>
-            <input type="text" name="adresse" id="adresse" size="40" />
-            <span class="erreur" id="errAdresse"></span>
-        </div>
-		<div> 
-            <label for="txtVille">Ville: </label>
-            <input type="text" name="ville" id="ville" size="40" />
-            <span class="erreur" id="errVille"></span>
-        </div>
-		<div> 
-            <label for="txtProvince">Province: </label>
-            <input type="text" name="province" id="province" size="40" />
-            <span class="erreur" id="errProvince"></span>
-        </div>
-		<div> 
-            <label for="txtPostal">Code Postal: </label>
-            <input type="text" name="code" id="code" size="40" />
-            <span class="erreur" id="errPostal"></span>
-        </div>
-		<div>   
-			<label for="txtUser">Nom d'utilisteur: </label>
-			<input type="text" name="username" id="username" />			
-		</div>
-		<div>  
-			<label for="txtPass">Mot de passe: </label>
-			<input type="password" name="password" id="password" />
-		</div>
-		<div>  
-			<label for="txtPass">Confirmer le mot de passe: </label>
-			<input type="password" name="txtPassConf" id="txtPass" />
-			<span class="erreur" id="errPassConf"></span>
-		</div>
-		<div> 
-            <label for="txtEmail">Email: </label>
-            <input type="email" name="email" id="email" size="40" />
-            <span class="erreur" id="errEmail"></span>
-        </div>
-		
-        <div id="zoneErreur" class="erreur">
-        
-				<div>
-				<input type="submit" value="S'inscrire"/>
-				<input type="reset" value="Recommencer"/>
-				</div>
-		</form>
-		</div>	
-		</div>
+			<p>
+			Merci pour votre inscription. S.V.P. veuillez vous connecter.
+			</p>
+	   
+	   </div>
 	   
 	   <div id = "rightPopulaire">
 			<div id = "CasePop">
 			
-			    <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Witcher 3: The Wild Hunt</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href ="critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Witcher 3: The Wild Hunt</h3> <div class = "Gamethumbnail"> </div>  </div></a>
 			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Assassin's Creed: Syndicate</h3> <div class = "Gamethumbnail"> </div>  </div></a>
 			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Ori and the blind forest</h3> <div class = "Gamethumbnail"> </div>  </div></a>
 			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Her story</h3> <div class = "Gamethumbnail"> </div>  </div></a>

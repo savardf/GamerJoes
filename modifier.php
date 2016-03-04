@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
    <head>
 		<meta charset="utf-8" />
-		<title>Gamer Joes: La référence Jeux Vidéo et Nouvelles Technologies au Québec - Inscription</title>
+		<title>Gamer Joes: La référence Jeux Vidéo et Nouvelles Technologies au Québec - Modifier</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
    </head>
    <body>
@@ -15,11 +15,17 @@
    <h2>La référence Jeux Vidéo et Nouvelles Technologies au Québec</h2>
    </div>
    <div id = "sessioninfo">
-     <a href="connect.html">Se connecter</a> <span> / </span>
-			<a href="inscription.html">S'inscrire</a>
-
-   
-   
+     <?php 
+	if (isset($_POST['login']) && $_POST['login'] == "admin" && $_POST['passe'] == "12345" )
+	{
+	$_SESSION['login'] = $_POST['login'];
+	
+	echo 'Bienvenue'.' '.$_POST['login'] .' ';
+	echo '<a href="logout.php">Se déconnecter</a> ';
+	echo '<a href="modifier.php">Modifier son compte</a>';
+	}
+	
+	?>
    <div id = "sessionconnecter">
    </div>
    
@@ -82,7 +88,7 @@
  
    <div id = "bande">
 			<div id = "stuff1">
-				<h2><span>Inscription</span></h2>
+				<h2><span>Modifier les infos du compte</span></h2>
 			</div>
 			<div id = "stuff2">
 				<h2><span>Notre top 10</span></h2>
@@ -93,7 +99,7 @@
    
 	   <div id = "textMainLeft">
 	   
-		<form id="formConnect" method="post" action="insciptionOk.php" >
+		<form id="formConnect" method="post" action="modifierOk.php" >
 		
         <div>  
             <label for="txtPrenom">Prénom: </label>
