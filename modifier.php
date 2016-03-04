@@ -133,7 +133,7 @@
         </div>
 		<div>   
 			<label for="txtUser">Nom d'utilisteur: </label>
-			<input type="text" name="username" id="username" />			
+			<input type="text" name="username" id="username" disabled="disabled"/>			
 		</div>
 		<div>  
 			<label for="txtPass">Mot de passe: </label>
