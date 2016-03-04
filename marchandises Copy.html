@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+   <head>
+		<meta charset="utf-8" />
+		<title>Gamer Joes: La référence Jeux Vidéo et Nouvelles Technologies au Québec</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="icon" href="favicon.ico"/>
+   </head>
+   <body>
+   <div id = "page">
+   <header>
+   <div id = "pageTop">
+	   <nav>
+		 <ul id="menu">
+			<li>
+				<a href="index.html">Nom du site - Acceuil</a>
+			</li>
+			<li>
+				<a href="index.html">Critiques</a>
+				<ul>
+					<li><a href="critiques\Broforce\critique_broforce.html">Broforce</a></li>
+					<li><a href="critiques/Witcher3/Critique_Witcher3.html">The Witcher 3</a></li>
+					<li><a href="critiques\Broforce\critique_broforce.html">Assassin's creed: Syndicate</a></li>
+					<li><a href="critiques\Broforce\critique_broforce.html">Ori and the blind forest</a></li>
+					<li><a href="critiques\Broforce\critique_broforce.html">Her Story</a></li>
+				</ul>
+			</li>
+			<li>
+             <a href="source.html">Sources</a>
+             
+			</li>
+			<li>
+				<a href="marchandises.html">Marchandise</a>
+				
+			</li>
+			
+        </ul>
+		</nav>
+   </div>
+   </header>
+   
+   
+	   <div id = "bannerUne">
+			<a href = "critiques\Broforce\critique_broforce.html">
+				<div id = "Vedette1" class = "Vedette">
+					<img src="Images/Broforce_Medium.jpg" alt="Image Jeu" /> 
+					<h1 > <span> BroForce: Style retro et Expendabros!!!</span></h1>
+				</div> 
+			</a>
+			<div id = "VedetteSecon">
+				<a href = "articles/witcher3GotY/Witcher3GotY.html">
+					<div id = "Vedette2" class = "Vedette">
+						<img src="Images/Halo5_Small.jpg" alt="Image Jeu" />
+						<h2><span>Halo 5: Guardian, Retour timide d'un classique.</span></h2>
+					</div> 
+				</a>
+				<a href = "articles/witcher3GotY/Witcher3GotY.html">
+					<div id = "Vedette3" class = "Vedette">
+					<img src="Images/witcher3_Small.jpg" alt="Image Jeu" />
+						<h2><span>The Witcher 3: Wild Hunt, Jeu de l'année!</span></h2>
+					</div>
+				</a>
+			</div>
+	   </div>
+ 
+   <div id = "bande">
+			<div id = "stuff1">
+				<h2><span>Achats</span></h2>
+			</div>
+			<div id = "stuff2">
+				<h2><span>Notre top 10</span></h2>
+			</div>
+		
+		</div>
+   <div id="contenu">   
+   
+	   <div id = "textMainLeft">
+	   
+			<form id="monForm" method="post" action="mailto:kf@MaCompagnie.com?subject=AjoutInventaire" >
+        <h1>Réservez votre marchandise Gamer Joes</h1>
+        <div>   
+            <label for="txtNom">Nom: </label>
+            <input type="text" name="txtNom" id="txtNom" />
+            <span class="erreur" id="errNom"></span>
+        </div>
+        <div>  
+            <label for="txtPrenom">Prénom: </label>
+            <input type="text" name="txtPrenom" id="txtPrenom" />
+            <span class="erreur" id="errPrenom"></span>
+        </div>
+        
+        <div> 
+            <label for="txtTelephone">Téléphone: </label>
+            <input type="text" name="txtTelephone" id="txtTelephone" size="27" maxlength="14" placeholder="999-9999 ou (999) 999-9999" />
+            <span class="erreur" id="errTelephone"></span>
+        </div>
+        <div> 
+            <label for="txtEmail">Email: </label>
+            <input type="email" name="txtEmail" id="txtEmail" size="40" />
+            <span class="erreur" id="errEmail"></span>
+        </div>
+        <div id = "afields"> 
+           <fieldset>  
+       <!--http://www.html5-tutorials.org/forms/checkboxes/-->
+            <legend>Quel types de marchandises seriez-vous intéressé à acheter</legend>
+            <input type="checkbox" name="cbx" id="cbx0" />
+            <label for="cbx0" class="labelChoix">T-Shirts</label>
+            <input type="checkbox" name="cbx" id="cbx1" />
+            <label for="cbx1" class="labelChoix">Tasses</label>
+            <input type="checkbox" name="cbx" id="cbx2" />
+            <label for="cbx2" class="labelChoix">Stylos</label>
+            <input type="checkbox" name="cbx" id="cbx3" />
+            <label for="cbx3" class="labelChoix">Tapis de souris</label>
+            <input type="checkbox" name="cbx" id="cbx4" />
+            <label for="cbx4" class="labelChoix">Macarons</label>
+            <span class="erreur" id="errCbx"></span>
+            </fieldset>
+            
+        </div>
+       <div>
+            <label for="numQuantite">Combien voudriez-vous en acheter: </label>
+            <input type="number" name="numQuantite" id="numQuantite" min="1" />
+            <span class="erreur" id="errQuantite"></span>
+        </div>
+        <div>
+            <label for="numPrix">Combien seriez vous prêt à payer pour la marchandise ?(en $): </label>
+			<input type="number" name="numPrix" id="numPrix"  min="1"/>
+            <span class="erreur" id="errPrix"></span>
+        </div>
+        <div>
+            <label for="dateAge">Quelle est votre date de naissance: </label>
+            <input type="date" name="dateAge" id="dateAge" />
+            <span class="erreur" id="errAge"></span>
+        </div>
+        <div id="zoneErreur" class="erreur">
+        </div>
+            <input type="submit" />
+            <input type="reset"/>
+    </form>
+		   
+	   
+	   </div>
+	   
+	   <div id = "rightPopulaire">
+			<div id = "CasePop">
+			
+			    <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Witcher 3: The Wild Hunt</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Assassin's Creed: Syndicate</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Ori and the blind forest</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Her story</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Rainbow Six: Siege</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>MineCraft Story Mode</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Heroes of the storm</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Metal Gear Solid 5</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>Fallout 4</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			   <a href = "critiques/Witcher3/Critique_Witcher3.html"><div class = "Pops"> <h3>The Witness</h3> <div class = "Gamethumbnail"> </div>  </div></a>
+			</div>
+		
+		
+	   </div>
+   </div>
+   
+   
+	<footer id ="about">
+	<p>Site créé par François Savard et Fred Lamirande, Janvier 2015</p>
+	 <p><a href="plan_du_Site.html">Plan du site</a></p>
+	 <p><a href = "mailto:info@gamerjoes.com">Contactez Nous!</a></p>
+	 
+	</footer>	
+   
+   
+   
+</div>
+	<script type="text/javascript" src="js/jsForm.js"></script>
+   </body>
+</html>

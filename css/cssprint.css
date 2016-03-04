@@ -1,0 +1,252 @@
+body{
+	
+	background-color:Dimgray;
+	
+}
+
+#page
+{
+	width:1000px;
+	margin:auto;
+}
+
+header{
+	
+	color:white;
+	height:30px;
+	margin-bottom:55px;
+	
+	
+}
+#print
+{
+	text-align:center;
+	display:block;
+}
+a:link,a:visited,a:hover,a:active  /* www.stackoverflow.com */
+{
+	text-decoration:none;
+	color:Orange;
+}
+
+
+
+#bannerUne{
+	
+	display:none;
+}
+
+#VedetteSecon
+{	
+	display:none;
+	
+}
+
+
+#Vedette1
+{
+	display:none;
+}
+
+#Vedette1 h1
+{
+	display:none;
+	
+}
+
+#Vedette1 h1 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   display:none;
+}
+
+#Vedette2
+{
+	display:none;
+	
+}
+
+#Vedette2 h2
+{
+	display:none;
+	
+}
+
+#Vedette2 h2 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   display:none;
+}
+
+#Vedette3
+{
+	display:none;
+}
+
+#Vedette3 h2
+{
+	display:none;
+		
+}
+
+#Vedette3 h2 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   display:none;
+}	
+
+#textMainLeft{
+	color:Orange;	
+	float:left;	
+	width: 70%;	
+	background-color:white;	
+	font:  14px/18px Helvetica
+}
+
+#bande
+{
+	color:Black;
+	width:100%;
+	display:flex;
+}
+
+#stuff1
+{
+	width:70%;
+	float:left;
+	text-align:center;
+	background-color:Orange;	
+}
+
+#stuff1 h2 span
+{
+	font: bold 22px/24px Helvetica;
+	
+}
+
+
+#stuff2
+{
+	width:30%;
+	float:left;
+	background-color:DarkOrange;
+	border-left:solid;
+	
+}
+
+#stuff2 h2 span
+{
+	margin-left: 10px;
+	font: bold 22px/24px Helvetica;
+}
+
+#stuff1 h2 
+{
+	margin-top: 5px;
+	margin-bottom:5px;
+	
+	
+}
+
+#stuff2 h2 
+{
+	margin-top: 5px;
+	margin-bottom:5px;
+	
+}
+
+#contenu
+{
+	
+	display:flex;
+	clear:left;
+}
+
+.Actualite{
+		
+	float:left;
+	clear:left;	
+	border-bottom:solid;
+	width:95%;	
+	
+}
+
+.smallMainPic
+{
+	margin-top:5px;
+	float: left;	
+}
+
+.smallMainPic img
+{
+	border: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	
+}
+
+.FeatArticle
+{
+	padding-left: 5px;		
+	height:170px;
+	overflow:hidden;
+	text-overflow: hidden;
+	color: Black;
+	
+}
+
+.FeatArticle h4
+{
+	color: DarkOrange;
+	margin-top:10px;	
+	font: bold 14px/18px Helvetica;
+	border-bottom:solid;
+	border-bottom-color: lightgray;
+	border-width: 1px;	
+}
+
+#CasePop
+{
+	margin-left: 10px;	
+	
+}
+
+
+#rightPopulaire{	
+	width:30%;
+	float:left;
+	background-color:lightgray;
+	border-left:solid;
+	
+}
+
+.Pops
+{
+	margin:auto;
+	
+}
+
+.Pops h3
+{
+	font: 18px/20px Helvetica;
+	background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   margin:2px 10px 2px auto;
+}
+
+footer{	
+	display:none;	
+}
+
+#afields
+{
+	width:80%
+}
+
+}
+#texteGauche{
+	text-align:right;
+}
+ #menu  /* la liste principale et les sous-listes */
+{
+        display:none;
+}
+ 

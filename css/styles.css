@@ -1,0 +1,437 @@
+body{
+	
+	background-color:Dimgray;
+	
+}
+
+#page
+{
+	width:1000px;
+	margin:auto;
+	background-color: #222;
+}
+
+header{
+	
+	color:white;
+	
+}
+
+#formConnect
+{
+	color:Orange;	
+	float:left;	
+	width: 100%;	
+	background-color:white;	
+	font:  14px/18px Helvetica
+}
+
+
+
+#welcomebanner
+{
+	background-color:DarkOrange;
+	float:left;
+	width: 100%;
+	
+}
+
+#titlebanner
+{
+	width:70%;
+	float:left;
+}
+
+#titlebanner h1
+{
+	font: bold 24px/45px Helvetica;
+	color: Black;
+	margin-bottom: 2px;
+	
+}
+
+#titlebanner h2
+{
+	color: Black;
+	margin-top: 2px;
+	font: bold 16px/24px Helvetica;
+	
+}
+
+#titlebanner img
+{	
+	float: left;
+	margin: 5px;	
+}
+
+#sessioninfo
+{
+	float:right;
+	width:30%;
+	text-align: right;
+	
+}
+
+#sessioninfo a
+{
+	color: white;
+	
+}
+
+a:link,a:visited,a:hover,a:active  /* www.stackoverflow.com */
+{
+	text-decoration:none;
+	color:Orange;
+}
+
+#print
+{
+	display:none;
+}
+
+#bannerUne{
+	
+	
+	margin:50px auto 50px 50px;
+	height:338px;
+	width:90%;	
+	float:left;
+	
+	
+}
+
+#VedetteSecon
+{	
+	float: left;
+	
+}
+
+
+
+
+#Vedette1
+{
+	position:relative;
+	float: left;
+}
+
+#Vedette1 h1
+{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width: 100%;
+	
+}
+
+#Vedette1 h1 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   color: Orange; 
+   font: bold 24px/45px Helvetica;
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+#Vedette2
+{
+	position:relative;
+	
+}
+
+#Vedette2 h2
+{
+	position:absolute;
+	top:10px;
+	left:0px;
+	width: 100%;
+	
+}
+
+#Vedette2 h2 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   color: Orange; 
+   font: bold 14px/20px Helvetica;
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+#Vedette3
+{
+	position:relative;
+	margin-top: -4px;
+}
+
+#Vedette3 h2
+{
+	position:absolute;
+	top:10px;
+	left:0px;
+	width: 100%;
+		
+}
+
+#Vedette3 h2 span /*https://css-tricks.com/text-blocks-over-image/ */
+{
+   color: Orange; 
+   font: bold 14px/20px Helvetica;
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}	
+
+#textMainLeft{
+	color:Orange;	
+	float:left;	
+	width: 70%;	
+	background-color:white;	
+	font:  14px/18px Helvetica
+}
+
+#bande
+{
+	color:Black;
+	width:100%;
+	display:flex;
+}
+
+#stuff1
+{
+	width:70%;
+	float:left;
+	text-align:center;
+	background-color:Orange;	
+}
+
+#stuff1 h2 span
+{
+	font: bold 22px/24px Helvetica;
+	
+}
+
+
+#stuff2
+{
+	width:30%;
+	float:left;
+	background-color:DarkOrange;
+	border-left:solid;
+	
+}
+
+#stuff2 h2 span
+{
+	margin-left: 10px;
+	font: bold 22px/24px Helvetica;
+}
+
+#stuff1 h2 
+{
+	margin-top: 5px;
+	margin-bottom:5px;
+	
+	
+}
+
+#stuff2 h2 
+{
+	margin-top: 5px;
+	margin-bottom:5px;
+	
+}
+
+#contenu
+{
+	
+	display:flex;
+	clear:left;
+}
+
+.Actualite{
+		
+	float:left;
+	clear:left;	
+	border-bottom:solid;
+	width:95%;	
+	
+}
+
+.smallMainPic
+{
+	margin-top:5px;
+	float: left;	
+}
+
+.smallMainPic img
+{
+	border: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	
+}
+
+.FeatArticle
+{
+	padding-left: 5px;		
+	height:170px;
+	overflow:hidden;
+	text-overflow: hidden;
+	color: Black;
+	
+}
+
+.FeatArticle h3
+{
+	color: DarkOrange;
+	margin-top:10px;	
+	font: bold 14px/18px Helvetica;
+	border-bottom:solid;
+	border-bottom-color: lightgray;
+	border-width: 1px;	
+}
+
+#CasePop
+{
+	margin-left: 10px;	
+	
+}
+
+
+#rightPopulaire{	
+	width:30%;
+	float:left;
+	background-color:lightgray;
+	border-left:solid;
+	
+}
+
+.Pops
+{
+	margin:auto;
+	
+}
+
+.Pops h3
+{
+	font: 18px/20px Helvetica;
+	background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   margin:2px 10px 2px auto;
+}
+
+footer{	
+	padding-bottom:45px;
+	margin-left:20px;
+	color: white;	
+}
+
+#afields
+{
+	width:80%;
+}
+
+
+#monForm
+{
+	
+	margin-bottom:15px;
+}
+
+#errCbx
+{
+	float:right;
+}
+
+#monForm div
+{
+	margin-left: 10px;
+	margin-bottom:15px;
+}
+
+
+#texteGauche{
+	text-align:right;
+}
+
+#zoneErreur
+{
+	color: red;
+}
+
+#monForm div span
+{
+	color:red;
+}
+
+
+ #menu, #menu ul  /* la liste principale et les sous-listes */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 27px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 12px; /* hauteur du texte : 12 pixels */
+}
+ 
+#menu a /* Contenu des listes, ici des liens */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background : #000; /* couleur de fond */   
+		border-radius: 4px;
+        color : Orange; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 249px; /* largeur */
+}
+ 
+#menu li /* Elements des listes positionnés en float */     
+{ 
+        float : left; 
+        border-right: 1px solid DarkOrange; /* on met une bordure à droite de chaque élément */
+}
+ 
+#menu li ul /* Sous-listes */
+{ 
+        margin:0;
+		width: 144px; /* Largeur des sous-listes */
+        display:none; /* on cache les sous-listes */
+		position: fixed;
+		z-index:10;
+}
+ 
+#menu li ul li /* Éléments de sous-listes */
+{
+        border-top : 1px solid DarkOrange /* on met une bordure en haut de chaque élément d'une sous liste */
+}
+ 
+#menu li ul ul /* Sous-sous-listes */
+{
+        margin : -28px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        border-left: 1px solid #ddd ; /* Petite bordure à gauche pour ne pas coller ... */     
+}
+ 
+#menu a:hover /* Lorsque la souris passe sur un des liens */   
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menu li:hover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        display:none; /* on cache les sous-sous-listes */
+		float:left;
+}
+ 
+#menu li:hover ul, #menu li li:hover ul   /* Sous-listes lorsque la souris passe sur un élément de liste ET 
+									sous-sous-listes lorsque la souris passe sur un élément de sous-liste */
+{
+        display: block; /* on fait ré-apparaitre la sous-liste */
+        min-height: 0; /* Corrige un bug sous IE */
+}

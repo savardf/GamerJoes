@@ -1,0 +1,4 @@
+ErrorDocument 404 /GamerJoes/erreur404.html
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule /GamerJoes/details-^([0-9]+/?)$.html /GamerJoes/details.php?no=$1 [L]
