@@ -146,7 +146,7 @@
  
    <div id = "bande">
 			<div id = "stuff1">
-				<h2><span>Produits</span></h2>
+				<h2><span>Confirmation de commande</span></h2>
 			</div>
 			<div id = "stuff2">
 				<h2><span>Rechercher un article</span></h2>
@@ -157,62 +157,80 @@
    
 	   <div id = "textMainLeft">
 	   
+	   <div id="notreAdresse">
+	   <li>Les production GamerJoes</li>
+	   <li>1233 rue des manettes</li>
+	   <li>Quebec (QC)</li>
+	   <li>G3X 5F3</li>
+	   <li>418-989-9939</li>
+	   </div>
+	   <div id='adresseClient'>
 	   <?php
-	   
-	   
-	   ?>
-	   
-	   <?php
-	   
-	   try
-	{
-		$req = $conn->prepare('CALL lister_produits()');
-		$req->execute();
-		
-		
-		while ($ligne = $req->fetch())
+		if (isset($_SESSION['user']))
 		{
-		$url = "details.php";
-		$urlImage = $ligne['image'];
-		$descript = $ligne['description'];
-		$nomItem = $ligne['nom'];
-		$prix  = $ligne['prix'];
-	   
-		echo "<a href = ".$url."?no=".$ligne['no'].">";
-		echo "<div class = \"Actualite\">";
-		echo "<div class = \"smallMainPic\">" ;
-		echo "<img src=".$urlImage." alt=\"Image Item\" />";
-		echo "</div>";
-		echo "<div class = \"FeatArticle\">";
-		echo "<h3>".$nomItem."</h3>";
-		echo "<p>".$descript."</p>";
-		echo "<p name = \"Prix\" >".$prix."$</p>";
-		echo "</div>	</div>	</a> ";
-		}
+		try
+		{
+			$req = $conn->prepare('CALL chercher_client_par_login(:vlogin)');
+			$req->execute(array('vlogin' => $_SESSION['user']));
+			
+			$resultat = $req->fetch();	
 				
-	}
-	   
-	   catch (PDOException $e) 
-	{      
-		exit( "Erreur" .  $e -> getMessage()); 
-	}
-	
-	$req->closeCursor();
-	
-	$conn = null;
-	   
-	   
-	   
-	   
-	   
-	   ?>
-	   
+			echo '<li>'.$resultat['prenom'].' '.$resultat['nom'].'</li> ';
+			echo '<li>'.$resultat['adresse'].'</li> ';
+			echo '<li>'.$resultat['ville'].', ('.$resultat['province'].')</li> ';
+			echo '<li>'.$resultat['codePostal'].'</li> ';
+			echo '<li>'.$resultat['email'].'</li> ';
+			?>
+			<FORM>
+			<label for="carteCredit">Mode de payement : </label>
+			<SELECT name="carteCredit" size="1">
+			<OPTION>Visa</option>
+			<OPTION>MasterCard</option>
+			<OPTION>American Express</option>
+			<OPTION>Paypal</option>
+			<OPTION>Caps</option>
+			</SELECT>
+			</FORM>
+
+
+			<?php
+			$req->closeCursor();
+			
+		}  
+		catch (PDOException $e) 
+		{      
+			exit( "Erreur" .  $e -> getMessage()); 
+		}	
+		
+		}?>
+	   </div>
+	   <div id="itemsAchat">
+		<?php
+		if (isset($_SESSION['panier']))
+		{
+		try
+		{
+			$req = $conn->prepare('CALL chercher_client_par_login(:vlogin)');
+			$req->execute(array('vlogin' => $_SESSION['user']));
+			
+			$resultat = $req->fetch();	
+				
+			echo '<li>'.$resultat['prenom'].' '.$resultat['nom'].'</li> ';
+			echo '<li>'.$resultat['adresse'].'</li> ';
+			echo '<li>'.$resultat['ville'].', ('.$resultat['province'].')</li> ';
+			echo '<li>'.$resultat['codePostal'].'</li> ';
+			echo '<li>'.$resultat['email'].'</li> ';
 					
+			$req->closeCursor();
 			
-			
-			
-		   
-	   
+		}  
+		catch (PDOException $e) 
+		{      
+			exit( "Erreur" .  $e -> getMessage()); 
+		}	
+		
+		}?>
+	   </div>
 	   </div>
 	   
 	   <div id = "rightPopulaire">

@@ -166,30 +166,29 @@
 	   
 	   try
 	{
-		$req = $conn->prepare('CALL lister_produits()');
-		$req->execute();
 		
-		
-		while ($ligne = $req->fetch())
-		{
-		$url = "details.php";
-		$urlImage = $ligne['image'];
-		$descript = $ligne['description'];
-		$nomItem = $ligne['nom'];
-		$prix  = $ligne['prix'];
-	   
-		echo "<a href = ".$url."?no=".$ligne['no'].">";
-		echo "<div class = \"Actualite\">";
-		echo "<div class = \"smallMainPic\">" ;
-		echo "<img src=".$urlImage." alt=\"Image Item\" />";
-		echo "</div>";
-		echo "<div class = \"FeatArticle\">";
-		echo "<h3>".$nomItem."</h3>";
-		echo "<p>".$descript."</p>";
-		echo "<p name = \"Prix\" >".$prix."$</p>";
-		echo "</div>	</div>	</a> ";
-		}
-				
+			$req = $conn->prepare('CALL chercher_produits_par_nom(:vnom)');
+			$req->execute(array('vnom' => $_GET['recherche']));
+			while ($ligne = $req->fetch())
+			{
+				$url = "details.php";
+				$urlImage = $ligne['image'];
+				$descript = $ligne['description'];
+				$nomItem = $ligne['nom'];
+				$prix  = $ligne['prix'];
+			   
+				echo "<a href = ".$url."?no=".$ligne['no'].">";
+				echo "<div class = \"Actualite\">";
+				echo "<div class = \"smallMainPic\">" ;
+				echo "<img src=".$urlImage." alt=\"Image Item\" />";
+				echo "</div>";
+				echo "<div class = \"FeatArticle\">";
+				echo "<h3>".$nomItem."</h3>";
+				echo "<p>".$descript."</p>";
+				echo "<p name = \"Prix\" >".$prix."$</p>";
+				echo "</div>	</div>	</a> ";
+			}
+			
 	}
 	   
 	   catch (PDOException $e) 
@@ -225,12 +224,12 @@
 			</div>
 			  <input type="submit" value="Rechercher"/>
 			</div>
-		<div id="zoneErreur" class="erreur">
+			<div id="zoneErreur" class="erreur">
         
 		
 		
-		</div>	
-		</form>
+			</div>	
+			</form>
 		
 	   </div>
    </div>

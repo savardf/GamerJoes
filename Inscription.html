@@ -93,65 +93,68 @@
    
 	   <div id = "textMainLeft">
 	   
-		<form id="formConnect" method="post" action="insciptionOk.php" >
-		
+		<form id="form" method="post" action="InscriptionOk.php" >
+		<div>
+			<label for="nom">Nom: </label>
+            <input type="text" name="nom" id="nom"  />
+            <span class="erreur" id="errNom"></span>
+		</div>
         <div>  
-            <label for="txtPrenom">Prénom: </label>
+            <label for="prenom">Prénom: </label>
             <input type="text" name="prenom" id="prenom" />
             <span class="erreur" id="errPrenom"></span>
         </div>
-		<div>
-			<label for="txtNom">Nom: </label>
-            <input type="text" name="nom" id="nom" />
-            <span class="erreur" id="errNom"></span>
-		</div>
+		
         <div> 
-            <label for="txtAdresse">Adresse: </label>
+            <label for="adresse">Adresse: </label>
             <input type="text" name="adresse" id="adresse" size="40" />
             <span class="erreur" id="errAdresse"></span>
         </div>
 		<div> 
-            <label for="txtVille">Ville: </label>
-            <input type="text" name="ville" id="ville" size="40" />
+            <label for="ville">Ville: </label>
+            <input type="text" name="ville" id="ville"size="40" />
             <span class="erreur" id="errVille"></span>
         </div>
 		<div> 
-            <label for="txtProvince">Province: </label>
-            <input type="text" name="province" id="province" size="40" />
+            <label for="province">Province: </label>
+            <input type="text" name="province" id="province"  size="40" />
             <span class="erreur" id="errProvince"></span>
         </div>
 		<div> 
-            <label for="txtPostal">Code Postal: </label>
+            <label for="code">Code Postal: </label>
             <input type="text" name="code" id="code" size="40" />
             <span class="erreur" id="errPostal"></span>
         </div>
 		<div>   
-			<label for="txtUser">Nom d'utilisteur: </label>
-			<input type="text" name="username" id="username" />			
+			<label for="user">Nom d'utilisteur: </label>
+			<input type="text" name="user" id="user" />		
+			<span class="erreur" id="errUser"></span>			
 		</div>
 		<div>  
-			<label for="txtPass">Mot de passe: </label>
-			<input type="password" name="password" id="password" />
+			<label for="password">Mot de passe: </label>
+			<input type="password" name="password" id="password"  />
+			<span class="erreur" id="errPass"></span>
 		</div>
 		<div>  
 			<label for="txtPass">Confirmer le mot de passe: </label>
-			<input type="password" name="txtPassConf" id="txtPass" />
+			<input type="password" name="txtPass" id="txtPass" />
 			<span class="erreur" id="errPassConf"></span>
 		</div>
 		<div> 
-            <label for="txtEmail">Email: </label>
+            <label for="email">Email: </label>
             <input type="email" name="email" id="email" size="40" />
             <span class="erreur" id="errEmail"></span>
         </div>
-		
+		<div>
+		<input type="submit" value="S'incrire"/>
+		<input type="reset" value="Recommencer"/>
+		</div>
         <div id="zoneErreur" class="erreur">
         
-				<div>
-				<input type="submit" value="S'inscrire"/>
-				<input type="reset" value="Recommencer"/>
-				</div>
-		</form>
+		
+		
 		</div>	
+		</form>
 		</div>
 	   
 	   <div id = "rightPopulaire">
@@ -182,6 +185,6 @@
    
    
 </div>
-	
+	<script type="text/javascript" src="js/jsForm.js"></script>
    </body>
 </html>

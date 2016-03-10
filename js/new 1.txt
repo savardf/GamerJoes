@@ -4,7 +4,7 @@ window.addEventListener("load",init,false);
 
 function init()
 {
-	document.getElementById("form").addEventListener("submit",valider,false);
+	document.getElementById("formModif").addEventListener("submit",valider,false);
 }
 
 function valider(e) {
@@ -13,18 +13,18 @@ function valider(e) {
 	document.getElementById("zoneErreur").innerHTML = "Vous avez les erreurs suivantes:<ul>";
    
 
-	var nom = document.getElementById("nom").value;
-	var prenom = document.getElementById("prenom").value;
-	var adresse = document.getElementById("adresse").value;
-	var ville = document.getElementById("ville").value;
-	var province = document.getElementById("province").value;
-    var code = document.getElementById("code").value;
-    var user = document.getElementById("user").value;
-    var pass = document.getElementById("password").value;
-    var txtPass = document.getElementById("txtPass").value;
-    var email=document.getElementById("email").value;
+	// var nom = document.getElementById("nom").value;
+	// var prenom = document.getElementById("prenom").value;
+	// var adresse = document.getElementById("adresse").value;
+	// var ville = document.getElementById("ville").value;
+	// var province = document.getElementById("province").value;
+    // var code = document.getElementById("code").value;
+    // var user = document.getElementById("user").value;
+    // var pass = document.getElementById("password").value;
+    // var txtPass = document.getElementById("txtPass").value;
+    // var email=document.getElementById("email").value;
 	
-	nom = nom.trim();
+	var nom = nom.trim();
 	document.getElementById("nom").value = nom;
     
 	if (nom.length == 0) {
@@ -82,10 +82,10 @@ function valider(e) {
 		erreur = true;
 	}
 	pass = pass.trim();
-	document.getElementById("password").value = pass;
+	document.getElementById("pass").value = pass;
    
-	if (pass.length == 0) {
-		document.getElementById("errPass").textContent = "*";
+	if (user.length == 0) {
+		document.getElementById("errPasse").textContent = "*";
 		document.getElementById("zoneErreur").innerHTML += "<li>Veuillez entrer un mot de passe</li>";
 		erreur = true;
 	}
@@ -94,12 +94,8 @@ function valider(e) {
    
 	if (txtPass.length == 0) {
 		document.getElementById("errPassConf").textContent = "*";
-		document.getElementById("zoneErreur").innerHTML += "<li>Veuillez confrmer le mot de passe</li>";
+		document.getElementById("zoneErreur").innerHTML += "<li>Veuillez conformer le mot de passe</li>";
 		erreur = true;
-	}
-	if (txtPass!=pass){
-		document.getElementById("errPassConf").textContent = "*";
-		document.getElementById("zoneErreur").innerHTML += "<li>Les deux mots de passe ne sont pas pareil</li>";
 	}
     email = email.trim();
 	document.getElementById("email").value = email;
@@ -109,13 +105,6 @@ function valider(e) {
 		document.getElementById("zoneErreur").innerHTML += "<li>Veuillez entrer un courriel</li>";
 		erreur = true;
 	}
-    
-   
-    
-    
-    
-    
-    
 
     document.getElementById("zoneErreur").innerHTML += "</ul>";
 	
@@ -125,14 +114,4 @@ function valider(e) {
 
 
 
-function viderChampsErreur()
-{
-	document.getElementById("errNom").textContent = "";
-	document.getElementById("errPrenom").textContent = "";
-	document.getElementById("errTelephone").textContent = "";
-	document.getElementById("errEmail").textContent = "";
-	document.getElementById("errPrix").textContent="";
-    document.getElementById("errQuantite").textContent="";
-    document.getElementById("errAge").textContent="";
-    document.getElementById("zoneErreur").innerHTML = "";
-}  
+

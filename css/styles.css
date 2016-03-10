@@ -16,7 +16,18 @@ header{
 	color:white;
 	
 }
-
+li{
+	text-decoration:none;
+	display:block;
+}
+#adresseClient{
+	float:left;
+	display:block;
+	
+}
+#itemsAchat{
+	float:right;
+}
 #formConnect
 {
 	color:Orange;	
