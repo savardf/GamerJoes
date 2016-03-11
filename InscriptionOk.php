@@ -8,7 +8,7 @@
 				try
 				{
 					$insert = $conn->prepare('CALL ajouter_client(:nom, :prenom,:adresse,:ville,:province,:codePostal,:login,:motPasse,:email)');
-					$insert->execute(array('nom' => $_POST['nom'],'prenom' => $_POST['prenom'],'adresse' => $_POST['adresse'],'ville' => $_POST['ville'], 'province' => $_POST['province'],'codePostal' => $_POST['code'], 'login' => $_POST['username'], 'motPasse' => sha1($_POST['password']), 'email' => $_POST['email']));
+					$insert->execute(array('nom' => $_POST['nom'],'prenom' => $_POST['prenom'],'adresse' => $_POST['adresse'],'ville' => $_POST['ville'], 'province' => $_POST['province'],'codePostal' => $_POST['code'], 'login' => $_POST['user'], 'motPasse' => sha1($_POST['password']), 'email' => $_POST['email']));
 				
 					
 				}
